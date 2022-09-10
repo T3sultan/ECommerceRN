@@ -3,7 +3,9 @@
     "name": "expoecommerce",
     "slug": "expoecommerce",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "privacy": "public",
+    "description": "E-Commerce",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -14,9 +16,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

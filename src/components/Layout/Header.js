@@ -1,15 +1,13 @@
 import {
   Dimensions,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
-import { Ionicons } from "@expo/vector-icons";
-import { Metrics } from "../../theme";
-
+import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { Colors, Metrics } from "../../theme";
 let { width } = Dimensions.get("window");
 
 const Header = () => {
@@ -17,13 +15,16 @@ const Header = () => {
     <View style={styles.container}>
       <View style={styles.wrapper}>
         <TouchableOpacity>
-          <Ionicons name="menu" size={30} color="gray" />
+          <Ionicons name="menu" size={25} color="gray" />
         </TouchableOpacity>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search..."
+          placeholder="search..."
           placeholderTextColor="#333"
         />
+        <TouchableOpacity>
+          <AntDesign name="search1" size={25} color="gray" />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -35,20 +36,21 @@ const styles = StyleSheet.create({
   container: {
     width: width,
     height: width / 5 - 20,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.white,
     marginTop: Metrics.base,
-    elevation: Metrics.start,
+    elevation: 2,
     paddingVertical: Metrics.halfBase,
     paddingHorizontal: Metrics.halfBase,
   },
   wrapper: {
     flexDirection: "row",
     alignItems: "center",
+    marginRight: 25,
   },
   searchInput: {
-    width: "85%",
-    height: width / 7 - 12,
-    backgroundColor: "#F2F3F4",
+    width: width - 80,
+    height: width / 8 - 12,
+    backgroundColor: Colors.HoneyDew,
     marginHorizontal: Metrics.halfBase,
     borderRadius: Metrics.start,
     marginLeft: Metrics.start,

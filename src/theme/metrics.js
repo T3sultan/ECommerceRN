@@ -9,6 +9,7 @@ const metrics = {
   base: scale(20),
   baseDouble: scale(30),
   halfBase: scale(10),
+  half10: scale(15),
   doubleBase: scale(40),
   regular: scale(50),
   screenWidth: width,

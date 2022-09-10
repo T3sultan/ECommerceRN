@@ -17,6 +17,14 @@ const colors = {
   description: "#666666",
   exploreButton: "#2980B9",
   orange: "#F2994A",
+  superLight: "#ECF0F1",
+  Saturation: "#cc80ff",
+  Aqua: "#00FFFF",
+  AliceBlue: "#F0F8FF",
+  BlueViolet: "#8A2BE2",
+  DarkOrchid: "#9932CC",
+  DeepPink: "#FF1493",
+  HoneyDew: "#F0FFF0",
 };
 
 export default colors;
