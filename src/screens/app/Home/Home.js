@@ -6,23 +6,63 @@ import {
   Text,
   View,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Swiper from "react-native-swiper";
-import { Colors, Metrics } from "../../../theme";
+import { Colors, Images, Metrics } from "../../../theme";
 let { width } = Dimensions.get("window");
 
 const Home = () => {
-  const [bannerData, setBannerData] = useState([]);
-  useEffect(() => {
-    setBannerData([
-      "https://thumbs.dreamstime.com/b/online-shopping-e-commerce-ecommerce-internet-shop-concept-blue-symbol-computer-keyboard-84742205.jpg",
-      "https://cdn.pixabay.com/photo/2019/12/14/08/36/shopping-4694470__340.jpg",
-      "https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140604__340.jpg",
-      "https://media.istockphoto.com/photos/isolated-of-shipping-paper-boxes-inside-blue-shopping-cart-trolley-on-picture-id1306668349?b=1&k=20&m=1306668349&s=170667a&w=0&h=lyTN3Kasg206073u4GMW2VwBzil8juVpt3nsqithplw=",
-      "https://images.all-free-download.com/images/graphiclarge/online_shop_promotional_facebook_post_digital_devices_presents_sketch_6919718.jpg",
-      "https://www.pngmart.com/files/11/E-Commerce-PNG-Free-Download.png",
-    ]);
-  }, []);
+  const slides = [
+    {
+      key: "one",
+      title: "React Native ",
+      subtitle: "React Native Learn once, write anywhere.",
+      description:
+        "React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.",
+      image: Images.image1,
+    },
+    {
+      key: "two",
+      title: "Flutter",
+      subtitle: "Build apps for any screen",
+      description:
+        "Flutter transforms the app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.",
+      image: Images.image2,
+    },
+    {
+      key: "three",
+      title: "Ionic",
+      subtitle: "One codebase. Any platform. Now in Vue.Angular.React.",
+      description:
+        "An open source mobile toolkit for building high quality, cross-platform native and web app experiences. Move faster with a single code base, running everywhere with JavaScript and the Web. ",
+      image: Images.image3,
+    },
+    {
+      key: "three",
+      title: "Ionic",
+      subtitle: "One codebase. Any platform. Now in Vue.Angular.React.",
+      description:
+        "An open source mobile toolkit for building high quality, cross-platform native and web app experiences. Move faster with a single code base, running everywhere with JavaScript and the Web. ",
+      image: Images.image4,
+    },
+    {
+      key: "three",
+      title: "Ionic",
+      subtitle: "One codebase. Any platform. Now in Vue.Angular.React.",
+      description:
+        "An open source mobile toolkit for building high quality, cross-platform native and web app experiences. Move faster with a single code base, running everywhere with JavaScript and the Web. ",
+      image: Images.image5,
+    },
+    {
+      key: "three",
+      title: "Ionic",
+      subtitle: "One codebase. Any platform. Now in Vue.Angular.React.",
+      description:
+        "An open source mobile toolkit for building high quality, cross-platform native and web app experiences. Move faster with a single code base, running everywhere with JavaScript and the Web. ",
+      image: Images.image6,
+    },
+  ];
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -30,15 +70,15 @@ const Home = () => {
           <Swiper
             showsButtons={false}
             autoplay={true}
-            autoplayTimeout={4}
+            autoplayTimeout={3}
             style={styles.swiperStyle}
           >
-            {bannerData.map(item => {
+            {slides.map(item => {
               return (
                 <Image
                   key={item}
                   resizeMode="contain"
-                  source={{ uri: item }}
+                  source={item.image}
                   style={styles.bannerImage}
                 />
               );

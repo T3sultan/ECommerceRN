@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   searchInput: {
     width: width - 80,
     height: width / 8 - 12,
-    backgroundColor: Colors.HoneyDew,
+    backgroundColor: Colors.superLight,
     marginHorizontal: Metrics.halfBase,
     borderRadius: Metrics.start,
     marginLeft: Metrics.start,
