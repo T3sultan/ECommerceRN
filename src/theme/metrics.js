@@ -18,6 +18,7 @@ const metrics = {
   btnBorderRadius: scale(20),
   splashWidth: scale(300),
   splashHeight: scale(300),
+  swiper: scale(200),
   hundred: scale(100),
 };
 
